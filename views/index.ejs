@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todoList</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        body{
+            background-color: #e398b047;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">>
+    <h1 style="background-color: #e4485d;; 
+    border: 3px solid yellow; border-radius: 10px;">welcome to your todoList, </h1>
+      
+   <ul>
+         <% if(locals.taskList){ %>
+              <% for(let i =0;i<taskList.length;i++){ %> 
+                <li><%= taskList[i]  %></li>
+            <%    }%>
+        <% } %> 
+  
+   </ul>
+    <form  action="/sub" method="post">
+        
+        <input type="text" name="task" placeholder="Add your task">
+        <button type="submit">+</button>
+
+
+    </form>
+
+
+
+
+    </div>
+</body>
+</html>
